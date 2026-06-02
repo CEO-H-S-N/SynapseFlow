@@ -1,27 +1,27 @@
-# ⚡ SynapseFlow — Visual AI Agent Swarm Operating System
+# SynapseFlow — Visual AI Agent Swarm Operating System
 
 > A stunning, real-time visual dashboard for orchestrating multi-agent AI workflows. Built as a Final Year Project (FYP), SynapseFlow lets you create, monitor, and manage swarms of AI agents through a modern, glassmorphic dark-mode UI.
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
-- [Overview](#-overview)
-- [AI Agent Codebase Guide](#-ai-agent-codebase-guide)
-- [Key Features](#-key-features)
-- [Architecture Overview](#-architecture-overview)
-- [Agent & Workflow Diagrams](#-agent--workflow-diagrams)
-- [Tech Stack](#-tech-stack)
-- [Project Structure](#-project-structure)
-- [Getting Started](#-getting-started)
-- [How It Works — Mock Data](#-how-it-works--mock-data)
-- [Switching to Real Data](#-switching-to-real-data)
-- [Roadmap](#-roadmap)
-- [License](#-license)
+- [Overview](#overview)
+- [AI Agent Codebase Guide](#ai-agent-codebase-guide)
+- [Key Features](#key-features)
+- [Architecture Overview](#architecture-overview)
+- [Agent & Workflow Diagrams](#agent--workflow-diagrams)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [Getting Started](#getting-started)
+- [How It Works — Mock Data](#how-it-works-—-mock-data)
+- [Switching to Real Data](#switching-to-real-data)
+- [Roadmap](#roadmap)
+- [License](#license)
 
 ---
 
-## 🧠 Overview
+## Overview
 
 SynapseFlow is a **frontend-only** visual operating system for AI agent swarms. It simulates an entire multi-agent orchestration platform directly in the browser — no backend, no API calls, no external services required.
 
@@ -33,11 +33,11 @@ The application demonstrates:
 - **Analytics Dashboard** — Task completion charts, token usage tracking, and simulated cost monitoring
 - **Template Gallery** — Pre-built swarm configurations for Research, Content Marketing, Engineering, Support, and more
 
-> **⚠️ Important**: SynapseFlow currently runs entirely on **mock/simulated data**. No actual LLM API calls are made. All agent statuses, token counts, activity events, and analytics are generated client-side via simulation engines. See [Switching to Real Data](#-switching-to-real-data) for instructions on connecting to real AI backends.
+> **Important**: SynapseFlow currently runs entirely on **mock/simulated data**. No actual LLM API calls are made. All agent statuses, token counts, activity events, and analytics are generated client-side via simulation engines. See [Switching to Real Data](#switching-to-real-data) for instructions on connecting to real AI backends.
 
 ---
 
-## 🤖 AI Agent Codebase Guide
+## AI Agent Codebase Guide
 
 For developers or other AI agents looking to understand, debug, or extend this repository, we have compiled an exhaustive technical reference document:
 
@@ -54,30 +54,30 @@ This guide includes:
 
 ---
 
-## ✨ Key Features
+## Key Features
 
 | Feature | Description |
 |---|---|
-| 🔐 **Simulated Auth Portal** | Animated login with biometric bypass and multi-step authentication simulation |
-| 🧠 **Agent Swarm Grid** | Cards for each agent showing real-time status, progress, tokens used, active tools, and health |
-| ✍️ **Agent Creator** | Modal to spawn new agents — choose role, personality, LLM model, tools, and capabilities |
-| 🔗 **Workflow Canvas** | React Flow–powered DAG editor with Agent, Approval, and Condition node types |
-| 📊 **Analytics Dashboard** | Recharts-powered charts for task throughput, token usage, cost tracking |
-| 📋 **Templates Gallery** | 8 pre-built swarm templates (Research, Content, Support, Coding, SEO, Sales, Social, DevOps) |
-| 💬 **Live Activity Feed** | Chronological event stream with status icons and agent avatars |
-| 🧪 **Thinking Stream** | Animated reasoning log showing agent "chain-of-thought" steps |
-| ⚙️ **Settings Panel** | API key input fields, simulation speed controls, and system safety limits |
-| 🌙 **Dark Glassmorphic UI** | Premium aesthetic with gradient accents, micro-animations, and backdrop blur |
+| **Simulated Auth Portal** | Animated login with biometric bypass and multi-step authentication simulation |
+| **Agent Swarm Grid** | Cards for each agent showing real-time status, progress, tokens used, active tools, and health |
+| **Agent Creator** | Modal to spawn new agents — choose role, personality, LLM model, tools, and capabilities |
+| **Workflow Canvas** | React Flow–powered DAG editor with Agent, Approval, and Condition node types |
+| **Analytics Dashboard** | Recharts-powered charts for task throughput, token usage, cost tracking |
+| **Templates Gallery** | 8 pre-built swarm templates (Research, Content, Support, Coding, SEO, Sales, Social, DevOps) |
+| **Live Activity Feed** | Chronological event stream with status icons and agent avatars |
+| **Thinking Stream** | Animated reasoning log showing agent "chain-of-thought" steps |
+| **Settings Panel** | API key input fields, simulation speed controls, and system safety limits |
+| **Dark Glassmorphic UI** | Premium aesthetic with gradient accents, micro-animations, and backdrop blur |
 
 ---
 
-## 🏗 Architecture Overview
+## Architecture Overview
 
 SynapseFlow follows a **client-side SPA architecture** with Zustand for global state and React components organized by feature domain.
 
 ```mermaid
 graph TB
-    subgraph Browser["🌐 Browser Runtime"]
+    subgraph Browser["Browser Runtime"]
         subgraph NextJS["Next.js App Router"]
             Page["page.tsx<br/>Main Entry & Router"]
         end
@@ -133,7 +133,7 @@ flowchart LR
 
 ---
 
-## 🤖 Agent & Workflow Diagrams
+## Agent & Workflow Diagrams
 
 ### Agent Lifecycle States
 
@@ -163,13 +163,13 @@ The pre-built workflow canvas demonstrates a content pipeline with conditional b
 
 ```mermaid
 flowchart LR
-    R["🔍 Research Agent<br/><i>Researching</i>"] --> W["✍️ Writer Agent<br/><i>Writing</i>"]
-    R --> A["📊 Analyst Agent<br/><i>Thinking</i>"]
-    W --> H["✅ Human Review<br/><i>Approval Gate</i>"]
+    R["Research Agent<br/><i>Researching</i>"] --> W["Writer Agent<br/><i>Writing</i>"]
+    R --> A["Analyst Agent<br/><i>Thinking</i>"]
+    W --> H["Human Review<br/><i>Approval Gate</i>"]
     A --> H
-    H --> Q{"🔀 Quality Check<br/><i>score > 85</i>"}
-    Q -->|Pass| P["📤 Publisher Agent<br/><i>Idle</i>"]
-    Q -->|Fail| Rev["🔄 Reviser Agent<br/><i>Idle</i>"]
+    H --> Q{"Quality Check<br/><i>score > 85</i>"}
+    Q -->|Pass| P["Publisher Agent<br/><i>Idle</i>"]
+    Q -->|Fail| Rev["Reviser Agent<br/><i>Idle</i>"]
     Rev -.->|"Retry Loop"| W
 
     style R fill:#3b82f620,stroke:#3b82f6,color:#fff
@@ -187,25 +187,25 @@ Shows how agents interact within the system:
 
 ```mermaid
 flowchart TB
-    subgraph Orchestrator["🧠 Atlas (Planner)"]
+    subgraph Orchestrator["Atlas (Planner)"]
         direction TB
         Plan["Plan workflow"]
         Delegate["Delegate tasks"]
     end
 
     subgraph Workers["Worker Agents"]
-        Nova["🔍 Nova<br/>Researcher"]
-        Quill["✍️ Quill<br/>Writer"]
-        Cipher["💻 Cipher<br/>Coder"]
-        Spark["⚡ Spark<br/>Analyst"]
+        Nova["Nova<br/>Researcher"]
+        Quill["Quill<br/>Writer"]
+        Cipher["Cipher<br/>Coder"]
+        Spark["Spark<br/>Analyst"]
     end
 
     subgraph Quality["Quality Layer"]
-        Sentinel["🛡️ Sentinel<br/>Reviewer"]
-        Pixel["🎨 Pixel<br/>Designer"]
+        Sentinel["Sentinel<br/>Reviewer"]
+        Pixel["Pixel<br/>Designer"]
     end
 
-    subgraph Coordination["🔗 Nexus (Coordinator)"]
+    subgraph Coordination["Nexus (Coordinator)"]
         Sync["Sync outputs"]
         Route["Route data"]
     end
@@ -262,7 +262,7 @@ graph TD
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 | Technology | Purpose |
 |---|---|
@@ -279,7 +279,7 @@ graph TD
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 synapse-flow/
@@ -328,7 +328,7 @@ synapse-flow/
 │   │   └── useAgentSimulation.ts # Client-side simulation engine (2s loop)
 │   │
 │   └── lib/
-│       ├── mock-data.ts          # ⚠️ Mock agent/activity data factories
+│       ├── mock-data.ts          # Mock agent/activity data factories
 │       ├── constants.ts          # Status configs, roles, tools, templates
 │       └── utils.ts              # Helpers: formatting, random, ID generation
 │
@@ -340,7 +340,7 @@ synapse-flow/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -382,7 +382,7 @@ npm start
 
 ---
 
-## 🧪 How It Works — Mock Data
+## How It Works — Mock Data
 
 SynapseFlow is currently a **frontend prototype** that simulates all backend behavior client-side. Here's exactly what is mocked and how:
 
@@ -392,14 +392,14 @@ The function `createMockAgents()` returns 8 hardcoded agents with pre-set proper
 
 | Agent | Role | Model | Initial Status |
 |---|---|---|---|
-| 🧠 Atlas | Planner | GPT-4o | Thinking |
-| 🔍 Nova | Researcher | Claude Sonnet | Researching |
-| ✍️ Quill | Writer | GPT-4o | Writing |
-| 🛡️ Sentinel | Reviewer | Gemini Pro | Reviewing |
-| 🎨 Pixel | Designer | DALL-E 3 | Idle |
-| 💻 Cipher | Coder | Claude Sonnet | Thinking |
-| 🔗 Nexus | Coordinator | GPT-4o Mini | Collaborating |
-| ⚡ Spark | Analyst | Gemini Pro | Completed |
+| Atlas | Planner | GPT-4o | Thinking |
+| Nova | Researcher | Claude Sonnet | Researching |
+| Quill | Writer | GPT-4o | Writing |
+| Sentinel | Reviewer | Gemini Pro | Reviewing |
+| Pixel | Designer | DALL-E 3 | Idle |
+| Cipher | Coder | Claude Sonnet | Thinking |
+| Nexus | Coordinator | GPT-4o Mini | Collaborating |
+| Spark | Analyst | Gemini Pro | Completed |
 
 Each agent has fields for `tokensUsed`, `progress`, `activeTools`, `lastOutput`, `health`, `memory`, `personality`, and `goal` — all statically defined.
 
@@ -429,7 +429,7 @@ All charts display randomly generated or computed values based on current agent 
 
 ---
 
-## 🔌 Switching to Real Data
+## Switching to Real Data
 
 To evolve SynapseFlow from a prototype into a production system, you need to replace the mock data layer with real backend integrations. Below is a step-by-step guide:
 
@@ -545,9 +545,9 @@ const handleLogin = async (e: React.FormEvent) => {
 
 ---
 
-## 🗺 Roadmap
+## Roadmap
 
-### ✅ Phase 1 — MVP (Complete)
+### Phase 1 — MVP (Complete)
 - Project scaffolding, design system, layout
 - Agent swarm manager with simulation
 - Workflow canvas with custom nodes
@@ -557,25 +557,25 @@ const handleLogin = async (e: React.FormEvent) => {
 - Auth portal (simulated)
 - Polish: animations, scrollbars, production build
 
-### 🔮 Phase 2 (Planned)
+### Phase 2 (Planned)
 - [ ] Real-time collaboration (multi-user)
 - [ ] Natural language workflow generation
 - [ ] Real backend with WebSocket integration
 - [ ] Advanced analytics with historical data
 
-### 🚀 Phase 3 (Future)
+### Phase 3 (Future)
 - [ ] Swarm plugin marketplace
 - [ ] Autonomous AI supervisor agent
 - [ ] Voice interaction commands
 
 ---
 
-## 📄 License
+## License
 
 This project was built as a **Final Year Project (FYP)**. Please check with the repository owner for license terms.
 
 ---
 
 <p align="center">
-  Built with ⚡ by SynapseFlow Team
+  Built by SynapseFlow Team
 </p>
